@@ -11,3 +11,5 @@ CMD [ "nginx", "-g" , "daemon", "off", ]
 EXPOSE 80
 
 ENV COURSE='devops'
+
+COPY TASKS.txt TASKS.txt
