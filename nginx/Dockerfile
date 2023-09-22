@@ -1,10 +1,11 @@
+# Use an official Nginx runtime as a parent image
 FROM nginx:alpine
 
-LABEL AUTHOR=surajkumar
+# Copy your website content into the Nginx document root
+COPY ./index.html /usr/share/nginx/html/
 
-COPY index.html /usr/share/nginx/html/index.html
+# Expose port 80 for the web server
+EXPOSE 80
 
-EXPOSE 8084:80
-
-CMD [ "nginx" , "-g" , "daemon" ,"off;", ]
-
+# Start Nginx when the container runs
+CMD ["nginx", "-g", "daemon off;"]
