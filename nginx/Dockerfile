@@ -2,10 +2,10 @@
 FROM nginx:alpine
 
 #Update the apt repository
-RUN apk update -y
+RUN apk update 
 
 #Install nginx 
-RUN apk install nginx -y
+RUN apk install nginx 
 
 # Copy your website content into the Nginx document root
 COPY ./index.html /usr/share/nginx/html/
