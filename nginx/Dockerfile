@@ -2,7 +2,7 @@
 FROM nginx:alpine
 
 #Update the apt repository
-RUN apkupdate -y
+RUN apk update -y
 
 #Install nginx 
 RUN apk install nginx -y
