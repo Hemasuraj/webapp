@@ -8,7 +8,7 @@ RUN apk update
 RUN apk add nginx 
 
 #Removing existing index.html file 
-RUN rm -f /usr/share/nginx/html
+RUN rm -f /usr/share/nginx/html/index.html
 
 # Copy your website content into the Nginx document root
 COPY ./index.html /usr/share/nginx/html/
