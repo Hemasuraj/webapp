@@ -2,10 +2,10 @@
 FROM nginx:alpine
 
 #Update the apt repository
-RUN yum update -y
+RUN apkupdate -y
 
 #Install nginx 
-RUN apt install nginx -y
+RUN apk install nginx -y
 
 # Copy your website content into the Nginx document root
 COPY ./index.html /usr/share/nginx/html/
