@@ -1,6 +1,12 @@
 # Use an official Nginx runtime as a parent image
 FROM nginx:alpine
 
+#Update the apt repository
+RUN apt update -y
+
+#Install nginx 
+RUN apt install nginx -y
+
 # Copy your website content into the Nginx document root
 COPY ./index.html /usr/share/nginx/html/
 
