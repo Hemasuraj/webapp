@@ -2,7 +2,7 @@
 FROM nginx:alpine
 
 #Update the apt repository
-RUN apt update -y
+RUN yum update -y
 
 #Install nginx 
 RUN apt install nginx -y
